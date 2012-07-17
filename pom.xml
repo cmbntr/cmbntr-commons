@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>org.sonatype.oss</groupId>
+    <artifactId>oss-parent</artifactId>
+    <version>7</version>
+  </parent>
+
+  <groupId>ch.cmbntr.commons</groupId>
+  <artifactId>commons-parent</artifactId>
+  <version>0.1-SNAPSHOT</version>
+
+  <packaging>pom</packaging>
+  <name>cmbntr commons parent</name>
+  <description>cmbntr commons java utilties</description>
+  <url>https://github.com/cmbntr/cmbntr-commons</url>
+
+  <licenses>
+    <license>
+      <name>The Apache Software License, Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <scm>
+    <url>https://github.com/cmbntr/cmbntr-commons</url>
+    <connection>scm:git:git@github.com:cmbntr/cmbntr-commons.git</connection>
+  </scm>
+
+  <developers>
+    <developer>
+      <id>cmbntr</id>
+      <name>Michael Locher</name>
+      <email>cmbntr@gmail.com</email>
+      <roles>
+        <role>owner</role>
+        <role>developer</role>
+      </roles>
+    </developer>
+  </developers>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-gpg-plugin</artifactId>
+        <version>1.4</version>
+        <executions>
+          <execution>
+            <id>sign-artifacts</id>
+            <phase>verify</phase>
+            <goals>
+              <goal>sign</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <properties>
+    <gpg.skip>true</gpg.skip>
+  </properties>
+
+</project>
